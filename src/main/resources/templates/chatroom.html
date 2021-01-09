@@ -1,0 +1,55 @@
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>EChat</title>
+    <!-- chatroom css样式文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon"/>
+    <style type="text/css" >
+        body{
+            background-image:url(/image/1.jpg);
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="banner">
+        <h1>EChat :)</h1>
+        <div id="activeUserWraper">
+            <span class="label label-info" id="status"></span><span class="label">位用户当前在线</span>
+        </div>
+    </div>
+    <div id="historyMsg">
+    </div>
+    <div class="controls">
+        <div class="items">
+            <input id="uploadUrl" type="hidden" value="/upload/image">
+            <input id="websocketUrl" type="hidden" value="/websocket">
+            <input id="emojiBaseUri" type="hidden" value="/media/emoji/">
+            <form id="sendImageForm" enctype="multipart/form-data" method="post">
+                <input id="emoji" class="btn btn-primary" type="button" value="emoji" title="emoji"/>
+                <label for="sendImage" class="imageLable">
+                    <input id="sendImageBtn" class="btn btn-success" type="button" value="发送图片"/>
+                    <input id="sendImage" type="file" value="发送图片" name="image" accept="image/jpg,image/jpeg,image/png,image/gif"/>
+                </label>
+                <input id="clearBtn" class="btn btn-warning" type="button" value="清屏" title="清除屏幕消息"/>
+                <input id="myName" type="hidden" name="userName" th:value="${userName}">
+            </form>
+        </div>
+        <textarea class="form-control" id="messageInput" placeHolder="回车键发送"></textarea>
+        <div id="emojiWrapper">
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/sockjs.js"></script>
+<script src="/js/stomp.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/chatroom.js"></script>
+</body>
+</html>

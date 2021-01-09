@@ -1,0 +1,33 @@
+server:
+  port: 443
+spring:
+  # 配置数据库连接池
+  datasource:
+    url: jdbc:mysql://localhost:3306/echat?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 654321
+
+    #    type指定数据源类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #  启动程序时，在连接池中初始化多少个连接
+      initial-size: 5
+      #    回收空闲连接时，将保证至少有minIdle个连接.
+      min-idle: 5
+      max-active: 20
+      #    程序向连接池中请求连接时,超过maxWait的值后，认为本次请求失败，单位毫秒
+      max-wait: 6000
+      time-between-eviction-runs-millis: 60000
+      #    池中某个连接的空闲时长达到 N 毫秒后, 连接池在下次检查空闲连接时，将回收该连接,要小于防火墙超时设置
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM user
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      #      配置监控拦截的filter
+      filters: stat,wall,log4j
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
