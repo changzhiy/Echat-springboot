@@ -1,4 +1,4 @@
-package cn.gd.cz.hong.chats.websocket;
+package cn.gd.cz.hong.chats.config.websocket;
 
 import cn.gd.cz.hong.chats.enums.LoginTypeEnum;
 import cn.gd.cz.hong.chats.model.LoginInfoDo;

@@ -11,11 +11,12 @@ public interface UserService {
 
     /**
      * 验证用户密码
+     *
      * @param name
      * @param password
      * @return 正确返回该用户对象，否则返回空
      */
-    public User validateUserPassword(String name, String password);
+    User validateUserPassword(String name, String password);
 
     /**
      * 该用户是否已经注册

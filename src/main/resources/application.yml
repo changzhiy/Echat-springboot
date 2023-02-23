@@ -3,7 +3,8 @@ server:
 spring:
   # 配置数据库连接池
   datasource:
-    url: jdbc:sqlite:D:/learn/experiment/Java/chats/sql/chats.sqllite # 创建的sqlite数据库所在路径
+#    url: jdbc:sqlite:./sql/chats.sqllite # 创建的sqlite数据库所在路径
+    url: jdbc:sqlite:./sql/chats.sqllite # 创建的sqlite数据库所在路径
     username: # 因为没有用户名和密码，所以这两个参数就没有值
     password:
     driver-class-name: org.sqlite.JDBC # sqlite驱动

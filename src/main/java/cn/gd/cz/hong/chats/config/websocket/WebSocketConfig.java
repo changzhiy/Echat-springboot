@@ -1,4 +1,4 @@
-package cn.gd.cz.hong.chats.websocket;
+package cn.gd.cz.hong.chats.config.websocket;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

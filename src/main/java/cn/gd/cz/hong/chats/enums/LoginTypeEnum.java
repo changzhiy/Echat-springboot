@@ -1,8 +1,7 @@
 package cn.gd.cz.hong.chats.enums;
 
 /**
- * @author MccreeFei
- * @create 2018-04-28 下午1:49
+ * @author hong
  */
 public enum LoginTypeEnum {
     LOGIN(1, "上线"),

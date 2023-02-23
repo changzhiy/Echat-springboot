@@ -3,8 +3,7 @@ package cn.gd.cz.hong.chats.model;
 import java.util.Date;
 
 /**
- * @author MccreeFei
- * @create 2018-04-28 下午1:35
+ * @author hong
  */
 public class MessageRecordDo {
     private Integer id;

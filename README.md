@@ -1,4 +1,4 @@
-# Echat-SpringBoot
+# chats-SpringBoot
 一款轻量级的基于SpringBoot + WebSocket的在线聊天室项目，在MccreeFei的聊天室基础上，将其升级为SpringBoot版本，去掉了JSP文件，去掉了xml编写的sql语句，使用thymeleaf以及注解的形式，更便于维护和使用。
 
 # 项目展示
